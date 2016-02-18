@@ -1,0 +1,123 @@
+/////////////////////HEADER
+
+class Header
+
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 30;
+};
+
+
+/////////////////////LOAD SCREEN
+
+onLoadName = "Substanz X";
+onLoadMission = "Auf der Suche nach dem Ursprung";
+author = "Fridel und McDiod für Gruppe Adler";
+loadScreen = "logo.paa";
+
+
+/////////////////////MISC
+
+respawnOnStart = 0;
+respawnDelay = 9999999;
+disabledAI=1;
+#include "CSSA3\CSSA3_header.hpp"
+#include "plank\plank.h"
+
+
+/////////////////////NOTIFICATIONS
+
+class CfgNotifications
+{
+	class Hinweis
+	{
+		title = "Hinweis"; // Tile displayed as text on black background. Filled by arguments.
+		iconText = "!";
+		description = "%1";
+		color[] = {1,1,1,1}; // Icon and text color
+		duration = 10; // How many seconds will the notification be displayed
+	};
+};
+
+
+/////////////////////ENDINGS
+
+class CfgDebriefing
+{  
+	class usawin
+	{
+		title = "Mission Erfolgreich";
+		subtitle = "Substanz X geborgen";
+		description = "Die Weltöffentlichkeit wird von der russischen Verschwörung erfahren. Substanz X ist nun in sicheren Händen.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+		class ruslose
+	{
+		title = "Mission Fehlgeschlagen";
+		subtitle = "Substanz X verloren";
+		description = "Die amerikanischen Schweine sind an Substanz X gekommen. Die westliche Presse wird unseren Plan zweifelsohne für ihre antirussische Propaganda benutzen.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+		class ruswin
+	{
+		title = "Mission Erfolgreich";
+		subtitle = "Substanz X geborgen";
+		description = "Substanz X ist in sicheren Händen. Die Amerikaner sind bei dem Einsatz bedauerlicherweise spurlos verschwunden.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+		class usalose
+	{
+		title = "Mission Fehlgeschlagen";
+		subtitle = "Substanz X verloren";
+		description = "Die verlogenen Russen haben uns getäuscht. Wer weiß was sie mit Substanz X vorhaben...";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+////////////////////////SOUNDS
+
+class CfgSounds
+{
+	sounds[] = {};
+	class startup
+	{
+		name = "sound from addon";
+		// start path to sound file in AddOn with @
+		sound[] = {"sounds\comp_startup.ogg", 0.8, 1};
+		titles[] = {0,""};
+	};
+	
+	class running
+	{
+		name = "sound from addon";
+		// start path to sound file in AddOn with @
+		sound[] = {"sounds\comp_run.ogg", 0.8, 1};
+		titles[] = {0,""};
+	};
+	
+	class shutdown
+	{
+		name = "sound from addon";
+		// start path to sound file in AddOn with @
+		sound[] = {"sounds\comp_shutdown.ogg", 0.8, 1};
+		titles[] = {0,""};
+	};
+	
+		class wakeup
+	{
+		name = "sound from addon";
+		// start path to sound file in AddOn with @
+		sound[] = {"sounds\wakeup.ogg", 0.8, 1};
+		titles[] = {0,""};
+	};
+};
+

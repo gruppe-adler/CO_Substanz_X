@@ -1,0 +1,3 @@
+//Überbleibsel eines längst vergangenen Skriptes...
+
+PUMPE_AN = false;
